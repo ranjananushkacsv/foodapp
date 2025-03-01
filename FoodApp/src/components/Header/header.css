@@ -2,15 +2,15 @@
     height: 70vh;
     margin: 30px auto;
     padding: 1.5rem 5%;
-    background: url('/header_img.png') no-repeat center center;
+    background: url('/header_img.png') no-repeat;
     background-size: cover;
-    border-radius: 18px;
+    border-radius: 15px;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     max-width: 80%;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #FFDD44; 
 }
 
 .header-contents {
@@ -18,43 +18,40 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.2vw;
+    gap: 1.5vw;
     max-width: 50%;
-    bottom: 12%;
-    left: 5%;
-    animation: fadeIn 2.5s ease-in-out;
+    bottom: 10%;
+    left: 4%;
+    animation: fadeIn 3s;
 }
 
 .header-contents h2 {
-    color: var(--theme-color);
-    font-size: max(4.5vw, 2.4rem);
+    color: #FFD700; 
+    font-size: max(4.5vw, 2.2rem);
     font-weight: bold;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+    text-shadow: 1px 1px 2px white;
 }
 
 .header-contents p {
-    color: var(--theme-color);
-    font-size: 1.1vw;
-    line-height: 1.6;
-    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    color: white;
+    font-size: 1vw;
+    line-height: 1.5;
 }
 
 .header button {
-    background: linear-gradient(135deg, white, #f0f0f0);
-    color: var(--text-color);
-    font-size: 1.8rem;
-    padding: 1.8rem 3.5rem;
+    background: white;
+    color: #FFA500; 
+    font-size: 2rem;
+    padding: 2rem 3.5rem;
     border: none;
-    border-radius: 45px;
+    border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
 }
 
 .header button:hover {
-    background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
-    color: var(--theme-color);
-    font-weight: 600;
-    transform: scale(1.05);
-    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.25);
+    background: #FFF5CC; 
+    color: #FFD700;
+    font-weight: 500;
 }

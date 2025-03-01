@@ -1,19 +1,20 @@
 import React from 'react'
 import Navbar from './components/Navbar/Navbar'
-import {Routes,Route} from 'react-router-dom'
-import Home from './screens/Home/Home'
-import Cart from './screens/Cart/Cart'
-import PlaceOrder from './screens/PlaceOrder/PlaceOrder'
+import Home from './screen/home/home'
+import Cart from './screen/cart/cart'
+import Order from './screen/placeorder/placeorder'
 
+import { Routes,Route } from 'react-router-dom'
+import "./App.css"
 const App = () => {
   return (
-    <div className='app'>
-      <Navbar/>
-      <Routes>
-        <Route path="/" element={<Home/>}></Route>
-        <Route path="/cart" element={<Cart/>}></Route>
-        <Route path="/order" element={<PlaceOrder/>}></Route>
-      </Routes>
+    <div className="app">
+        <Navbar/>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/order" element={<Order />} />
+        </Routes>
     </div>
   )
 }

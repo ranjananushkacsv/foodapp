@@ -1,0 +1,72 @@
+.explore-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 10px;
+}
+
+.explore-menu h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #222;
+}
+
+.explore-menu-text {
+    font-size: 1.5rem;
+    max-width: 65%;
+    color: #6e6e6e;
+    line-height: 1.5;
+}
+
+.explore-menu-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+    margin: 20px 0;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+}
+
+.explore-menu-list::-webkit-scrollbar {
+    display: none;
+}
+
+.explore-menu-list-item img {
+    width: 8vw;
+    min-width: 85px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.explore-menu-list-item img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.explore-menu-list-item p {
+    margin-top: 8px;
+    color: #5a5a5a;
+    font-size: max(1.3vw, 1.5rem);
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.explore-menu-list-item p:hover {
+    color: var(--theme-color);
+}
+
+.explore-menu hr {
+    margin: 12px 0;
+    height: 2px;
+    background-color: #dcdcdc;
+    border: none;
+}
+
+.explore-menu-list-item .active {
+    border: 4px solid var(--theme-color);
+    padding: 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

@@ -1,25 +1,27 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from './screen/Navbar/Navbar';
-import Home from './screen/Home/Home';
-import Dashboard from './screen/Dashboard/Dashboard';
-import Settings from './screen/Settings/Settings';
-import Profile from './screen/Profile/Profile';
+import React from 'react'
+import Navbar from './components/Navbar/Navbar'
+import {Routes,Route} from 'react-router-dom'
+import Home from './screens/Home/Home'
+import Cart from './screens/Cart/Cart'
+import PlaceOrder from './screens/PlaceOrder/PlaceOrder'
+import Footer from './components/Footer/Footer'
 
-function App() 
-{
+const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Navbar />}>
-          <Route index element={<Home />} />
-          <Route path="dashboard" element={<Dashboard />}>
-            <Route path="profile" element={<Profile />} />
-            <Route path="settings" element={<Settings />} />
-          </Route>
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  );
+    <>
+      <div className='app'>
+        <Navbar/>
+        <Routes>
+          <Route path="/" element={<Home/>}></Route>
+          <Route path="/cart" element={<Cart/>}></Route>
+          <Route path="/order" element={<PlaceOrder/>}></Route>
+        </Routes>
+      </div>
+      <Footer/>
+    </>
+    
+
+  )
 }
 
-export default App;
+export default App

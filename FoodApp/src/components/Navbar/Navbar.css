@@ -3,76 +3,83 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    background-color: #ffffff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     position: sticky;
     top: 0;
     z-index: 100;
 }
 
+/* Logo Styling */
 .navbar .logo {
     width: 180px;
     transition: transform 0.2s ease-in-out;
 }
 
 .navbar .logo:hover {
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
+/* Navigation Menu */
 .navbar-menu {
     display: flex;
     list-style: none;
-    gap: 25px;
+    gap: 30px;
     font-size: 1.6rem;
-    color: #49557e;
-    font-weight: 500;
+    color: #2c3e50; /* Dark blue-gray for readability */
+    font-weight: 600;
 }
 
 .navbar-menu li {
     cursor: pointer;
-    transition: color 0.2s ease-in-out;
+    transition: color 0.3s ease-in-out;
 }
 
 .navbar-menu li:hover {
-    color: var(--theme-color);
+    color: #ff7f50; /* Coral */
 }
 
+/* Right Section */
 .navbar-right {
     display: flex;
     align-items: center;
     gap: 30px;
 }
 
+/* Buttons */
 .navbar button {
     background: transparent;
-    color: #49557e;
+    color: #2c3e50;
     font-size: 1.6rem;
     padding: 10px 25px;
-    border: 1px solid var(--theme-color);
+    border: 2px solid #ff7f50;
     border-radius: 50px;
     cursor: pointer;
-    transition: 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .navbar button:hover {
-    background-color: var(--theme-color);
+    background-color: #ff7f50;
     color: white;
+    box-shadow: 0 4px 10px rgba(255, 127, 80, 0.3);
 }
 
+/* Active Page Indicator */
 .navbar .active {
     padding-bottom: 3px;
-    border-bottom: 2px solid #49557e;
+    border-bottom: 2px solid #ff7f50;
 }
 
+/* Basket Indicator */
 .basket-dot {
     position: relative;
 }
 
 .basket-dot .dot {
     position: absolute;
-    min-height: 10px;
-    min-width: 10px;
-    background-color: var(--theme-color);
+    min-height: 12px;
+    min-width: 12px;
+    background-color: #ff7f50;
     border-radius: 50%;
     top: -5px;
     right: -5px;
@@ -98,17 +105,18 @@
     }
 
     .navbar button {
-        padding: 7px 18px;
+        padding: 8px 20px;
         font-size: 1.4rem;
     }
 }
 
+/* Mobile View */
 @media (max-width: 750px) {
     .navbar-menu {
         display: none;
     }
 
     .navbar {
-        padding: 15px 3vw;
+        padding: 15px 4vw;
     }
 }

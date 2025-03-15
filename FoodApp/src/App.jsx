@@ -1,33 +1,29 @@
-import React from 'react'
-import Navbar from './components/Navbar/Navbar'
-import {Routes,Route} from 'react-router-dom'
-import Home from './screen/Home/Home'
-import Cart from './screen/Cart/Cart'
-import PlaceOrder from './screen/PlaceOrder/PlaceOrder'
-import Footer from './components/Footer/Footer'
-import LoginPopUp from './components/LoginPopUp/LoginPopUp'
-import { useState } from 'react'
-
+import React, { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar';
+import Home from './screen/Home/Home';
+import Cart from './screen/Cart/Cart';
+import PlaceOrder from './screen/PlaceOrder/PlaceOrder';
+import Footer from './components/Footer/Footer';
+import LoginPopUp from './components/LoginPopUp/LoginPopUp';
 
 const App = () => {
+  const [showLogin, setShowLogin] = useState(true);
 
-  const[showLogin, setShowLogin] = useState(true);
   return (
     <>
-      {showLogin&& <LoginPopUp setLogin={setShowLogin}/>}
+      {showLogin && <LoginPopUp setShowLogin={setShowLogin} />}
       <div className='app'>
-        <Navbar/>
+        <Navbar />
         <Routes>
-          <Route path="/" element={<Home/>}></Route>
-          <Route path="/cart" element={<Cart/>}></Route>
-          <Route path="/order" element={<PlaceOrder/>}></Route>
+          <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/order" element={<PlaceOrder />} />
         </Routes>
       </div>
-      <Footer/>
+      <Footer />
     </>
-    
+  );
+};
 
-  )
-}
-
-export default App
+export default App;

@@ -72,3 +72,41 @@
     width: max(15vw, 200px);
     cursor: pointer;
 }
+
+.cart-promocode{
+    flex:1;
+}
+
+.cart-promocode-input{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eaeaea;
+    border-radius: 4px;
+}
+
+.cart-promocode-input input{
+    outline: none;
+    padding-left: 10px;
+    border: none;
+    background: transparent;
+}
+
+.cart-promocode-input button{
+    width: max(15vw, 200px);
+    padding:12px 5px;
+    background-color: black;
+    border: none;
+    color: #e0e0e2;
+    border-radius: 4px;
+
+}
+@media(max-width:750px){
+    .cart-bottom{
+        flex-direction: column-reverse;
+    }
+    .cart-promocode{
+        justify-content: start;
+    }
+}

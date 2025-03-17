@@ -8,9 +8,10 @@
     position: sticky;
     top: 0;
     z-index: 100;
+    text-decoration: none;
 }
 
-/* Logo Styling */
+
 .navbar .logo {
     width: 180px;
     transition: transform 0.2s ease-in-out;
@@ -20,14 +21,14 @@
     transform: scale(1.08);
 }
 
-/* Navigation Menu */
 .navbar-menu {
     display: flex;
     list-style: none;
     gap: 30px;
     font-size: 1.6rem;
-    color: #2c3e50; /* Dark blue-gray for readability */
+    color: #8f0fc1; 
     font-weight: 600;
+    text-decoration: none;
 }
 
 .navbar-menu li {
@@ -36,41 +37,37 @@
 }
 
 .navbar-menu li:hover {
-    color: #ff7f50; /* Coral */
+    color: #8f0fc1; 
 }
 
-/* Right Section */
 .navbar-right {
     display: flex;
     align-items: center;
     gap: 30px;
 }
 
-/* Buttons */
 .navbar button {
     background: transparent;
     color: #2c3e50;
     font-size: 1.6rem;
     padding: 10px 25px;
-    border: 2px solid #ff7f50;
+    border: 2px solid #8f0fc1;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
 
 .navbar button:hover {
-    background-color: #ff7f50;
+    background-color: #8f0fc1;
     color: white;
     box-shadow: 0 4px 10px rgba(255, 127, 80, 0.3);
 }
 
-/* Active Page Indicator */
 .navbar .active {
     padding-bottom: 3px;
-    border-bottom: 2px solid #ff7f50;
+    border-bottom: 2px solid #8f0fc1;
 }
 
-/* Basket Indicator */
 .basket-dot {
     position: relative;
 }
@@ -79,13 +76,12 @@
     position: absolute;
     min-height: 12px;
     min-width: 12px;
-    background-color: #ff7f50;
+    background-color: rgba(245, 94, 94, 0.718);
     border-radius: 50%;
     top: -5px;
     right: -5px;
 }
 
-/* Responsive Design */
 @media (max-width: 900px) {
     .navbar .logo {
         width: 140px;
@@ -110,7 +106,7 @@
     }
 }
 
-/* Mobile View */
+
 @media (max-width: 750px) {
     .navbar-menu {
         display: none;

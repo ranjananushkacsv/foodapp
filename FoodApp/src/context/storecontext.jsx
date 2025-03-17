@@ -20,13 +20,28 @@ const StoreContextProvider = (props) => {
         }));
     };
 
+    const getTotalCartAmount = () => {
+        let total = 0;
+        for (let item in cartItems) {
+            if (cartItems[item] > 0) {
+                let itemInfo = food_list.find(food => food._id === item);
+                total += itemInfo.price;
+            }
+        }
+        return total;
+    };
+
     const contextValue = {
+        getTotalCartAmount,
         food_list,
         cartItems,
         setCartItems,
         addToCart,
         removeFromCart
     };
+
+
+    
 
     return (
         <StoreContext.Provider value={contextValue}>

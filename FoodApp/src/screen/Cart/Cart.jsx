@@ -1,50 +1,80 @@
 import { useContext } from "react";
 import "./Cart.css";
-import { StoreContext } from "../../context/StoreContext"; 
-import assets from "../../assets/assets"; 
+import {assets} from '../../assets/assets'
+import {StoreContext} from "../../context/StoreContext";
 
 const Cart = () => {
   const { cartItems, addToCart, removeFromCart, food_list } = useContext(StoreContext);
-
   return (
     <div className="cart">
       <div className="cart-items-title">
         <p>Items</p>
+        <p>Title</p>
         <p>Price</p>
         <p>Quantity</p>
         <p>Total</p>
         <p>Modify</p>
       </div>
+      <br />
       <hr />
-
       {food_list.map((food, index) => {
         if (cartItems[food._id] > 0) {
           return (
-            <div key={index} className="cart-items-item">
-              <img src={food.image} alt={food.name} />
-              <p>{food.name}</p>
-              <p>{food.price}</p>
-              <p>{cartItems[food._id]}</p>
-              <p>{cartItems[food._id] * food.price}</p>
-
-              <div className="cart-counter food-item-counter">
-                <img
-                  onClick={() => removeFromCart(food._id)}
-                  src={assets.remove_icon_red}
-                  alt="Remove"
-                />
+            <>
+              <div className="cart-items-title cart-items-item">
+                <img src={food.image} alt="" />
+                <p>{food.name}</p>
+                <p>{food.price}</p>
                 <p>{cartItems[food._id]}</p>
-                <img
-                  onClick={() => addToCart(food._id)}
-                  src={assets.add_icon_green}
-                  alt="Add"
-                />
+                <p>{cartItems[food._id] * food.price}</p>
+                <div className="cart-counter food-item-counter">
+                  <img
+                    onClick={() => removeFromCart(food._id)}
+                    src={assets.remove_icon_red}
+                    alt=""
+                  />
+                  <p>{cartItems[food._id]}</p>
+                  <img
+                    onClick={() => addToCart(food._id)}
+                    src={assets.add_icon_green}
+                    alt=""
+                  />
+                </div>
               </div>
-            </div>
+              <hr />
+            </>
           );
         }
-        return null;
       })}
+      <div className="cart-bottom">
+        <div className="cart-total">
+          <h2>Cart Totals</h2>
+          <div>
+            <div className="cart-total-details">
+              <p>Subtotal</p>
+              <p>0</p>
+            </div>
+            <hr />
+            <div className="cart-total-details">
+              <p>Delivery Fee</p>
+              <p>0</p>
+            </div>
+            <hr />
+            <div className="cart-total-details">
+              <b>Total</b>
+              <b>0</b>
+            </div>
+          </div>
+          <button > Proceed to Checkout</button>
+        </div>
+        <div className="cart-promocode">
+          <p>If you have a promocode, enter it here</p>
+          <div className="cart-promocode-input">
+            <input type="text" placeholder="Enter promocode" />
+            <button>Apply</button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
